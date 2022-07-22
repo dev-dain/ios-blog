@@ -21,6 +21,10 @@ class SubOneViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         if let msg = message, !msg.isEmpty {
             self.messageLabel.text = msg
             self.messageLabel.sizeToFit()
