@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A5478AE1288B8E4500A4C908 /* SendMessageDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5478AE0288B8E4500A4C908 /* SendMessageDelegate.swift */; };
 		A5CDBA6E2889835100ACDCD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CDBA6D2889835100ACDCD9 /* AppDelegate.swift */; };
 		A5CDBA702889835100ACDCD9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CDBA6F2889835100ACDCD9 /* SceneDelegate.swift */; };
 		A5CDBA722889835100ACDCD9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CDBA712889835100ACDCD9 /* ViewController.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A5478AE0288B8E4500A4C908 /* SendMessageDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMessageDelegate.swift; sourceTree = "<group>"; };
 		A5CDBA6A2889835100ACDCD9 /* Code_NVController_Ex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Code_NVController_Ex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5CDBA6D2889835100ACDCD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5CDBA6F2889835100ACDCD9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				A5CDBA7B2889835200ACDCD9 /* Info.plist */,
 				A5CDBA9D288986E200ACDCD9 /* SubOneViewController.swift */,
 				A5CDBA9F288986EC00ACDCD9 /* SubTwoViewController.swift */,
+				A5478AE0288B8E4500A4C908 /* SendMessageDelegate.swift */,
 			);
 			path = Code_NVController_Ex;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 			files = (
 				A5CDBA9E288986E200ACDCD9 /* SubOneViewController.swift in Sources */,
 				A5CDBA722889835100ACDCD9 /* ViewController.swift in Sources */,
+				A5478AE1288B8E4500A4C908 /* SendMessageDelegate.swift in Sources */,
 				A5CDBAA0288986EC00ACDCD9 /* SubTwoViewController.swift in Sources */,
 				A5CDBA6E2889835100ACDCD9 /* AppDelegate.swift in Sources */,
 				A5CDBA702889835100ACDCD9 /* SceneDelegate.swift in Sources */,

@@ -11,10 +11,13 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var msgFromOneLabel: UILabel!
     @IBOutlet weak var sendOneTextField: UITextField!
+    @IBOutlet weak var msgFromTwoLabel: UILabel!
+    @IBOutlet weak var sendTwoTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.msgFromOneLabel.text = "No Message"
+        self.msgFromTwoLabel.text = "No Message"
     }
 
     @IBAction func tapSendOneButton(_ sender: UIButton) {
@@ -27,10 +30,21 @@ class ViewController: UIViewController {
         self.navigationController?.pushViewController(viewController, animated: true)
     }
     
+    @IBAction func tapSendTwoButton(_ sender: UIButton) {
+        guard let viewController = self.storyboard?.instantiateViewController(withIdentifier: "SubTwoViewController") as? SubTwoViewController else { return }
+//        viewController.modalPresentationStyle = .fullScreen
+        viewController.message = sendTwoTextField.text
+        viewController.delegate = self
+        self.present(viewController, animated: true)
+    }
 }
 
 extension ViewController: SendMessageDelegate {
-    func sendMessage(_ message: String) {
-        msgFromOneLabel.text = message
+    func sendMessage(_ message: String, name: String) {
+        if name == "one" {
+            msgFromOneLabel.text = message
+        } else {
+            msgFromTwoLabel.text = message
+        }
     }
 }

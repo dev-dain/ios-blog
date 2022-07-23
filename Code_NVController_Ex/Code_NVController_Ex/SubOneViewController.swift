@@ -7,10 +7,6 @@
 
 import UIKit
 
-protocol SendMessageDelegate: AnyObject {
-    func sendMessage(_ message: String)
-}
-
 class SubOneViewController: UIViewController {
     var message: String?
     weak var delegate: SendMessageDelegate?
@@ -48,7 +44,7 @@ class SubOneViewController: UIViewController {
     }
     @IBAction func tapBackButton(_ sender: UIButton) {
         guard let message = self.messageTextField.text else { return }
-        self.delegate?.sendMessage(message)
+        self.delegate?.sendMessage(message, name: "one")
         self.navigationController?.popViewController(animated: true)
     }
 }

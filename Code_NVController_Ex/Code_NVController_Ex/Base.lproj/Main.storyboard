@@ -130,10 +130,13 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QAe-1h-d2o">
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QAe-1h-d2o">
                                                 <rect key="frame" x="262" y="0.0" width="104" height="34"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Present Two"/>
+                                                <connections>
+                                                    <action selector="tapSendTwoButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LPl-RN-twD"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -167,7 +170,9 @@
                     <navigationItem key="navigationItem" id="DuV-kw-LcM"/>
                     <connections>
                         <outlet property="msgFromOneLabel" destination="JdV-3k-XMq" id="0iT-af-yg2"/>
+                        <outlet property="msgFromTwoLabel" destination="36v-9g-6NS" id="Ze3-HJ-bcO"/>
                         <outlet property="sendOneTextField" destination="fhZ-xt-Moh" id="ayw-0M-KaH"/>
+                        <outlet property="sendTwoTextField" destination="40t-Us-4zM" id="tyG-PI-c5s"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -325,6 +330,9 @@
                                         <rect key="frame" x="0.0" y="36.5" width="366" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="textEditing:" destination="706-Hi-ze8" eventType="editingChanged" id="oJe-EF-ouk"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -338,6 +346,9 @@
                                 <rect key="frame" x="24" y="541" width="366" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Text Back"/>
+                                <connections>
+                                    <action selector="tapBackButton:" destination="706-Hi-ze8" eventType="touchUpInside" id="lTq-RU-Uzo"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="o3A-cQ-v0X"/>
@@ -361,6 +372,11 @@
                             <constraint firstItem="360-ET-bmz" firstAttribute="centerX" secondItem="kOu-lZ-Bye" secondAttribute="centerX" id="yCX-Cr-dEF"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="messageLabel" destination="Oyc-dM-qXS" id="CDK-Zd-b05"/>
+                        <outlet property="messageTextField" destination="Zjf-xi-ghi" id="RDc-aK-JSR"/>
+                        <outlet property="textBackButton" destination="HJd-ye-tPC" id="Jni-y6-WGd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EdU-he-NjA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
