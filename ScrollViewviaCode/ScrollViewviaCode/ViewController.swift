@@ -17,6 +17,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         view.addSubview(scrollView)
+        view.backgroundColor = .white
         
         // addSubview를 먼저 해준 다음 constraint를 더해야 함
         // 그렇지 않으면..
@@ -46,13 +47,14 @@ class ViewController: UIViewController {
             stackView.leadingAnchor.constraint(equalTo: scrollView.contentLayoutGuide.leadingAnchor),
             stackView.trailingAnchor.constraint(equalTo: scrollView.contentLayoutGuide.trailingAnchor),
             stackView.topAnchor.constraint(equalTo: scrollView.contentLayoutGuide.topAnchor),
-            stackView.bottomAnchor.constraint(equalTo: scrollView.contentLayoutGuide.bottomAnchor)
+            stackView.bottomAnchor.constraint(equalTo: scrollView.contentLayoutGuide.bottomAnchor),
+            stackView.widthAnchor.constraint(equalTo: scrollView.frameLayoutGuide.widthAnchor)
         ])
 
 //        let stackHeightAnchor = stackView.widthAnchor.constraint(equalTo: scrollView.frameLayoutGuide.widthAnchor)
-        let stackHeightAnchor = stackView.widthAnchor.constraint(equalTo: scrollView.frameLayoutGuide.widthAnchor)
-//        stackHeightAnchor.priority = .defaultLow  영향이 없음
-        stackHeightAnchor.isActive = true
+//        let stackHeightAnchor = stackView.widthAnchor.constraint(equalTo: scrollView.frameLayoutGuide.widthAnchor)
+////        stackHeightAnchor.priority = .defaultLow  영향이 없음
+//        stackHeightAnchor.isActive = true
 
         fillStackView()
     }
