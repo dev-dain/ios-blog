@@ -35,37 +35,43 @@ class ViewController: UIViewController {
 
         scrollView.addSubview(stackView)
         
-        stackView.axis = .vertical
         stackView.spacing = 0
         stackView.translatesAutoresizingMaskIntoConstraints = false
-
+        
         NSLayoutConstraint.activate([
-//            stackView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
-//            stackView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
-//            stackView.topAnchor.constraint(equalTo: scrollView.topAnchor),
-//            stackView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
             stackView.leadingAnchor.constraint(equalTo: scrollView.contentLayoutGuide.leadingAnchor),
             stackView.trailingAnchor.constraint(equalTo: scrollView.contentLayoutGuide.trailingAnchor),
             stackView.topAnchor.constraint(equalTo: scrollView.contentLayoutGuide.topAnchor),
             stackView.bottomAnchor.constraint(equalTo: scrollView.contentLayoutGuide.bottomAnchor),
-            stackView.widthAnchor.constraint(equalTo: scrollView.frameLayoutGuide.widthAnchor)
         ])
-
-//        let stackHeightAnchor = stackView.widthAnchor.constraint(equalTo: scrollView.frameLayoutGuide.widthAnchor)
-//        let stackHeightAnchor = stackView.widthAnchor.constraint(equalTo: scrollView.frameLayoutGuide.widthAnchor)
-////        stackHeightAnchor.priority = .defaultLow  영향이 없음
-//        stackHeightAnchor.isActive = true
-
-        fillStackView()
+        
+        setVerticalStackView()
+//        setHorizontalStackView()
     }
     
-    private func fillStackView() {
+    private func setVerticalStackView() {
+        stackView.axis = .vertical
+        stackView.widthAnchor.constraint(equalTo: scrollView.frameLayoutGuide.widthAnchor).isActive = true
+        fillStackView("vertical")
+    }
+    
+    private func setHorizontalStackView() {
+        stackView.axis = .horizontal
+        stackView.heightAnchor.constraint(equalTo: scrollView.frameLayoutGuide.heightAnchor).isActive = true
+        fillStackView("horizontal")
+    }
+    
+    private func fillStackView(_ axis: String) {
         let colorArray = [UIColor.blue, .red, .yellow, .purple, .green, .black, .orange, .gray]
         for color in colorArray {
             let elementView = UIView()
             elementView.backgroundColor = color
             elementView.translatesAutoresizingMaskIntoConstraints = false
-            elementView.heightAnchor.constraint(equalToConstant: 300).isActive = true
+            if axis == "horizontal" {
+                elementView.widthAnchor.constraint(equalToConstant: 200).isActive = true
+            } else {
+                elementView.heightAnchor.constraint(equalToConstant: 300).isActive = true
+            }
             stackView.addArrangedSubview(elementView)
         }
     }
