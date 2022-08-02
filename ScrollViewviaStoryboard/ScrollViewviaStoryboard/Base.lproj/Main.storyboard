@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="pYB-YI-yZT">
             <objects>
-                <viewController id="kUa-xT-Xok" customClass="ViewController" customModule="SameAgeMovie" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="kUa-xT-Xok" customClass="ViewController" customModule="ScrollViewviaStoryboard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5u0-RK-yMs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
