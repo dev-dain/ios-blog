@@ -19,16 +19,15 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FOB-3y-GEL">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="752-oQ-U2o">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="752-oQ-U2o">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                                     </stackView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="752-oQ-U2o" firstAttribute="width" secondItem="2PM-62-0zA" secondAttribute="width" id="1FM-Ch-QYg"/>
                                     <constraint firstItem="752-oQ-U2o" firstAttribute="leading" secondItem="9HN-4Y-PPc" secondAttribute="leading" id="3Bb-wf-FAS"/>
                                     <constraint firstItem="752-oQ-U2o" firstAttribute="trailing" secondItem="9HN-4Y-PPc" secondAttribute="trailing" id="3nb-Ys-LI9"/>
-                                    <constraint firstItem="752-oQ-U2o" firstAttribute="width" secondItem="2PM-62-0zA" secondAttribute="width" priority="250" id="9MF-fR-hX5"/>
-                                    <constraint firstItem="2PM-62-0zA" firstAttribute="trailing" secondItem="752-oQ-U2o" secondAttribute="trailing" id="Vls-4o-mRd"/>
-                                    <constraint firstItem="752-oQ-U2o" firstAttribute="height" secondItem="2PM-62-0zA" secondAttribute="height" priority="250" id="fLD-7n-ac5"/>
+                                    <constraint firstItem="752-oQ-U2o" firstAttribute="bottom" secondItem="2PM-62-0zA" secondAttribute="bottom" priority="250" id="IP3-4G-BMk"/>
                                     <constraint firstItem="9HN-4Y-PPc" firstAttribute="top" secondItem="752-oQ-U2o" secondAttribute="top" id="tzM-a9-VzB"/>
                                     <constraint firstItem="752-oQ-U2o" firstAttribute="bottom" secondItem="9HN-4Y-PPc" secondAttribute="bottom" id="xPf-qa-TFw"/>
                                 </constraints>
